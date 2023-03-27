@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./img/imgtottus/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- KEYWORDS -->
+    <meta name="keywords" content= "Supermercados Tottus, donde podrás encontrar variedad de productos y precios competitivos, que podrás adquirir de manera fácil y segura. Entre los la variedad de productos tenemos abarrotes, líquidos, perfumerías, articulo de higiene personal, fiambrería, lácteos, congelados, alimentos para mascotas, noon food: hogar, basar, vestuario, línea blanca y electrodomésticos">
+    <!-- descripcion -->
+    <meta name="descripcion" content= "Tottus, variedad, productos, hogar, supermercado, online, videojuegos, ofertas, televisores, artículos escolares, preciazos, precios competitivos, precios bajos, compras, fácil y segura, ofertas, falabella.com, catálogo, productos, APPfazil, cmr puntos, canje, acumula puntos, carnes, parrilla, vacuno, pollo, cerdo, pavo, vino, cervezas, bebidas, espumantes, delivery, sin salir de casa, despensa, arroz, legumbres, pastas, postres aderezos, aceites, preparar deliciosos platillos, frutas, verduras, videojuegos, tecnología, tablets, smart tv, celulares">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--CUSTOM CSS-->  
+    <link rel="stylesheet" href="./style.css">
+    <title>Supermercado Tottus | Preciazos todos los Días</title>
+  
+</head>
+<body>
+    <header>
+        <div class="header-section container">
+            <img src="./img/imgtottus/logo-tottus_completo.png" width="180px" alt="nav-logo">
+            <div>
+                <img onclick="showCart(this)" class="cart" src="./images/cart1.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">X</p>
+                <h3>Mi carrito</h3>
+                <div class="card-items">
+               <!-- <div class="item">
+                        <img class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20548165-LhlJB88C-medium.jpg" alt="Risotto Champiñones">
+                        <div class="item-content">
+                            <h5>Risotto Champiñones - 40 GR</h5>
+                            <h5 class="cart-price">2470$</h5>
+                            <h6>Amount: 3</h6>
+                        </div>
+                        <span>X</span>
+                    </div>
+    
+                    <div class="item">
+                        <img src="./images/products/keyboard-1.jpg" alt="">
+                        <div class="item-content">
+                            <h5>name of product name of product name of product</h5>
+                            <h5 class="cart-price">45.50$</h5>
+                            <h6>Amount: 3</h6>
+                        </div>
+                        <span class="delete-product" data-id="">X</span>
+                    </div> -->
+                </div>
+                <h2>Total: $<strong class="price-total">0</strong></h2>
+            </div>
+        </div>
+    </header>
+    <!--NEWS CARD-->  
+    <section class="banner1">
+        <img class="banner1" src="./img/imgtottus/huincha-desk-fpay.jpg" alt="banner1">
+    </section>
+    <div class="api">
+        <div id="UF"></div>
+        <div id="DolarO"></div>
+        <div id="DolarA"></div>
+        <div id="Euro"></div>
+        <div id="IPC"></div>
+        <div id="UTM"></div>
+    </div>
+    <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+        <h3>Producto Añadido al carrito!</h3>
+    </div>
+    <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+          Producto eliminado del carrito!
+    </div>
+    <div class="container1">
+        <h1>Supermercado Tottus - Preciazos todos los Días</h1>
+        <h2 class="titulo-principal2">Los más Vendidos</h2>
+    </section>
+    <section class="container">
+        <div class="products">
+            <div class="carts">
+                <div class="card-items news-cards-propio">
+                    <img class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20548165-LhlJB88C-medium.jpg" alt="Risotto Champiñones">
+                    <p><span>2470</span>$</p>
+                </div>
+                <p class="title">Risotto Champiñones - 40 GR</p>
+                <a href="" data-id="1" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+            <div class="carts">
+                <div class="card-items news-cards-propio">
+                    <img class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20386774-qf9cW0sV-medium.png" alt="Cereal Infantil Nestum Frutilla">
+                    <p><span>6490</span>$</p>
+                </div>
+                <p class="title">Cereal Infantil Nestum Frutilla - 250g</p>
+                <a href="" data-id="2" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+            <div class="carts">
+                <div class="card-items news-cards-propio">
+                    <img class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20388854-_IMYqDND.jpg?wid=1500&hei=1500&qlt=70" alt="Leche Semidescremada">
+                    <p><span>1470</span>$</p>
+                </div>
+                <p class="title">Pack Leche Semidescremada - Pack 6x1 LT</p>
+                <a href="" data-id="3" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+            <div class="carts">
+                <div class="card-items news-cards-propio">
+                    <img  class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20218026_1-LhmQawg8.jpg?wid=1500&hei=1500&qlt=70" alt="Cereal Inflado Maíz">
+                    <p><span>1770</span>$</p>
+                </div>
+                <p class="title">Cereal Inflado Maíz - 300 GR</p>
+                <a href="" data-id="4" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+            <div class="carts">
+                <div class="card-items news-cards-propio">
+                    <img class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20211526-38YL_0zf-medium.jpg" alt="Queso Gauda">
+                    <p><span>4970</span>$</p>
+                </div>
+                <p class="title">Queso Gauda Laminado - 500 GR</p>
+                <a href="" data-id="5" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+            <div class="carts">
+                <div class="card-items news-cards-propio">
+                    <img class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/4011088-aosxGOr0-medium.jpg" alt="Mantequilla con Sal">
+                    <p><span>2470</span>$</p>
+                </div>
+                <p class="title">Mantequilla con Sal - 250 GR</p>
+                <a href="" data-id="6" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+            <div class="carts">
+                <div class="card-items news-cards-propio">
+                    <img class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/8100127-riMnyQe2-medium.jpg" alt="Queso Chanco">
+                    <p><span>5390</span>$</p>
+                </div>
+                <p class="title">Queso Chanco Laminado - 500 GR</p>
+                <a href="" data-id="7" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+            <div class="carts">
+                <div class="card-items news-cards-propio">
+                    <img  class=figura src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20050239-Oy6zFS-p-medium.jpg" alt="Chorizo">
+                    <p><span>4030</span>$</p>
+                </div>
+                <p class="title">Chorizo Parrillero - 20 Und</p>
+                <a href="" data-id="8" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <!--FOOTER BOOTSTRAP --> 
+    <div class="container6-fluid">
+        <div class="row footer-links p-5 pb-2 text-red">
+                <div class="col-lg-4 col-md-6 col-xs-12">   
+                    <div class="mb-3">                 
+                        <h3 class="h3 mb-3">Te Ayudamos</h3>
+                    </div>
+                    <div class="mb-2">
+                        <a class="mb-2" target="_blank" href="https://www.falabella.com/falabella-cl/page/contactanos">Centro de ayuda</a>
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://www.falabella.com/falabella-cl/page/contactanos">contactanos</a>
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://www.falabella.com/falabella-cl/page/Cambios-y-Devoluciones?staticPageId=11300005">devoluciones y cambios</a>
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://www.falabella.com/falabella-cl/page/consultas-boletas-facturas">boletas y facturas</a>            
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://www.falabella.com/falabella-cl/orderdetailsearch">estado del pedido</a>       
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://www.falabella.com/falabella-cl/page/canal-de-integridad">canal de integridada</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12">   
+                    <div class="mb-3">    
+                        <h3 class="h3 mb-3">Sé parte del Grupo Falabella</h3>
+                    </div>
+                    <div class="mb-2"> 
+                        <a target="_blank" href="https://www.falabella.com/falabella-cl/page/Vende-en-Falabella.com?mkid=LA_VI_VER_1000002626&staticPageId=42100010">Vende en Falabella.com</a>
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://investors.falabella.com/English/overview/default.aspx">nuestros inversionistas</a>
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://www.falabella.com/falabella-cl/page/venta-empresa">venta a empresas</a>
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://muevete.falabella.com">trabaja en grupo falabella</a>
+                    </div>
+                    <div class="mb-2">
+                        <a target="_blank" href="https://www.falabella.com/falabella-cl/page/Mundial-Qatar-2022">mundial de qatar 2022</a>           
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12">   
+                    <div class="mb-3">    
+                        <h3 class="h3 mb-3">Siguenos en las Redes Sociales</h3>
+                    </div>
+                    <div class="rrss mb-0"> 
+                        <a target="_blank" href="https://www.instagram.com/falabellacom_cl/?hl=es"><img src="./img/imgtottus/logotransIG.png" class="mx-auto" alt="logo de instagram"></a>
+               
+                        <a target="_blank"  href="https://twitter.com/falabellaAyuda"><img src="./img/imgtottus/logotransFace.png"   class="mx-auto"alt="logo de facebook"></a>
+                    </div class=>
+                </div>
+                
+            </div>
+        </div>
+    </div> 
+    <div class="fluid col-xs-12">
+        <h3 class="final text-white text-center">Todos los Derechos Reservados</h3>
+    </div>           
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script>
+        function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("products-id").style.display = "none";
+        }
+
+    </script>
+    <script src="./carrito.js" ></script>
+</body>
+</html>
+
+><!-- D<!DOCTYPE html>
+
+
+            
+            
+           
+                       
+</head> 
+</html> -->

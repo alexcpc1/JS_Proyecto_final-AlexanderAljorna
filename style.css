@@ -1,0 +1,1200 @@
+body{
+    font-family: system-ui;
+}
+header{
+    background-color: #e4e4e8;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    box-shadow: 0 7px 8px -3px grey;
+    position: fixed;
+    width: 100%;
+    margin-top: -10px;
+    z-index: 99;
+}
+.container{
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+.header-section{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    position: relative;
+}
+.header-section div{
+    position: relative;
+}
+.header-section p{
+    position: absolute;
+    top: 32px;
+    right: -8px;
+    background-color: #fff;
+    padding: 1px 6px;
+    border-radius: 50%;
+    color: red;
+    font-weight: 700;
+    font-family: system-ui;
+    line-height: 18px;
+}
+.logo{
+    width: 164px;
+    height: 84px;
+    cursor: pointer;
+}
+
+.cart{
+    width: 39px;
+    height: 38px;
+}
+.cart-products{
+    position: absolute!important;
+    top: 82px;
+    right: -18px;
+    background-color: #fff;
+    padding: 0 18px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    display: none;
+    min-width: 290px;
+}
+
+.cart:hover{
+    margin-bottom: 16px;
+    transition-duration: .5s;
+}
+/*end header*/
+.products{
+    padding-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.carts{
+    max-width: 250px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    padding-bottom: 34px;
+    margin-bottom: 40px;
+}
+.carts img{
+    width: 100%;
+}
+.carts p{
+    font-family: system-ui;
+    font-weight: 500;
+    padding: 20px 0px 0px 0px;
+    margin-bottom: 24px;
+}
+.carts div p{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background-color:red;
+    color: #fff;
+    padding: 2px 7px 4px 21px;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+.carts div{
+    position: relative;
+}
+.carts a{
+    font-family: system-ui;
+    text-decoration: none;
+    background: blue;
+    padding: 9px 23px;
+    color: #fff;
+    font-size: 17px;
+
+    font-weight: 700;
+  
+}
+
+.carts a:hover{
+    background: #fff;
+    color: blue;
+    border: solid 2px blue;
+    transition-duration: .3s;
+}
+
+/*float cart*/
+.cart-products .item img{
+    width: 115px;
+}
+
+.cart-products .item{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px blue;
+}
+.cart-products .item .item-content{
+    margin: 0 19px;
+    width: 201px;
+}
+.cart-products .item .item-content h5{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+.cart-products .item .item-content h6{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+.cart-products .item span{
+    background-color: red;
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: system-ui;
+    cursor: pointer;
+}
+.cart-products h3{
+    margin-bottom: 0;
+}
+.cart-products .item .item-content h5.cart-price{
+    font-weight: 700;
+}
+
+/*style to btn close*/
+p.close-btn{
+    top: -4px;
+    right: 6px;
+    cursor: pointer;
+    color: #000;
+}
+.container1 h1 {
+    font-size: 40px;
+    padding-top: 20px;
+    margin-left: 20px;
+} 
+.container1 h2 {
+  margin-left: 20px;
+} 
+/* mi ccs proyecto
+/*aplicacion de mixin
+.container-5 h2, .iframe1, .despensa ul h2, .animacion, .abrircuentacmr ul h2, .abrircuentacmr ul h1, .abrircuentacmr, .titulo-principal3 h3, .titulo-principal2 h2, .titulo-principal1 ul h1 {
+  display: flex;
+  align-items: center;
+}
+
+.banner4 img, .banner3 img, .banner2 img {
+  width: 100%;
+  height: 80px;
+}
+
+/*aplicacion de mixin*/
+.news-cards-propio {
+  border-radius: 10px;
+  border: 0;
+}
+
+.news-cards-propio img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.5s;
+  padding: 10px 10px;
+}
+
+.figura {
+  max-height: 223px;
+  overflow: hidden;
+}
+
+.titulo {
+  padding: 16px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/*aplicacion de maps*/
+.news-cards-propio:hover img {
+  transform: scale(1.15);
+}
+
+.news-cards-propio:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*nesting*/
+.btn-add-cart {
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.4rem 1.3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+.btn-add-cart:hover {
+  box-shadow: 0 5px 10px rgb(157, 156, 156);
+  background: rgb(5, 117, 209);
+  color: white;
+}
+/*
+.nav-main {
+  font-size: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+}
+.nav-main ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nav-main ul li {
+  padding: 10px;
+}
+.nav-main ul li a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*NAVEGACION
+.nav-bg {
+  background: #043e79;
+}
+
+.container-fluid a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  background: #043e79;
+  justify-content: space-between;
+  align-content: center;
+}
+
+/*class nav main
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.nav-main img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.nav-menu {
+  flex: 1;
+  max-width: 1449px;
+  margin: 0 auto;
+  padding: 0px 0px;
+}
+
+.navbar-nav a:hover {
+  color: grey;
+}
+
+/*NEWS CARD
+.container1 {
+  width: 100%;
+  padding: 10px 40px;
+}
+
+.row-propio {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  width: 100%;
+  padding: 0px 40px;
+  margin: 0%;
+}
+
+.titulo h5 {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  text-transform: capitalize;
+  margin: 0%;
+}
+
+.titulo p {
+  color: rgb(185, 8, 8);
+  font-weight: bold;
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+*/
+.titulo-principal1 ul h1 {
+  font-size: 30px;
+  font-weight: bold;
+  height: 50px;
+  margin-left: 20px;
+  text-transform: capitalize;
+}
+/*
+.titulo-principal2 h2 {
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: space-between;
+  height: 50px;
+  margin-left: 20px;
+  text-transform: capitalize;
+}
+
+.titulo-principal3 h3 {
+  font-size: 20px;
+  justify-content: space-between;
+  height: 50px;
+  margin-left: 20px;
+  text-transform: capitalize;
+}
+
+.news-cards h3 {
+  font-size: 14px;
+  margin: 10px 0;
+  color: rgb(82, 81, 81);
+  text-transform: capitalize;
+}
+
+.news-cards h4 {
+  font-size: 18px;
+  color: rgb(185, 8, 8);
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+/*NEWS CARD 2*/
+.banner1 img {
+  width: 100%;
+  height: 180px;
+  padding-top: 50px;
+
+}
+/*NEWS CARD 
+.banner11 img {
+  width: 100%;
+  height: 250px;
+}
+
+.banner5 img {
+  width: 100%;
+  height: 150px;
+}
+
+/*NEWS CARD 3 DESTACADOS
+.container-3 h2 {
+  font-size: 30px;
+  display: flex;
+  padding: 20px 0;
+  text-transform: capitalize;
+  color: #212529;
+  margin: 0 40px;
+}
+
+.news-cards3 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.news-cards3-1 img {
+  width: 100%;
+  height: 450px;
+}
+
+.news-cards3-2 img {
+  width: 100%;
+  height: 550px;
+}
+
+/*CMRPUNTOS - ABRIR CUENTA CMR
+.abrircuentacmr {
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px 20px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imag/principal-img-background-falabella-cl.jpg);
+}
+
+.abrircuentacmr ul h1 {
+  font-size: 35px;
+  height: 60px;
+  padding: 40px 20px 20px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.abrircuentacmr ul h2 {
+  font-size: 25px;
+  height: 60px;
+  padding: 20px 20px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.news-cards-abrir h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: white;
+  text-transform: capitalize;
+}
+
+.news-cards-abrir {
+  display: grid;
+  grid-template-columns: 1fr 1fr 50%;
+  margin: 10px 0;
+  padding-top: 40px;
+}
+
+.news-cards-abrir img {
+  width: 100%;
+  height: 100px;
+}
+
+.bannercmr1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bannercmr1 img {
+  width: 100%;
+  height: 300px;
+}
+
+/*USAR CUENTA CMR ORIGINAL
+.usarcuentacmr {
+  display: flex;
+  margin: 0 20px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.news-cards2-usar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.news-cards2-usar h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 20px 20px;
+  color: rgb(82, 81, 81);
+  text-transform: capitalize;
+}
+
+/*ACUMULA PUNTOS CMR
+.iframe33 {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  padding: 0px 10px;
+}
+
+/*ANIMACION
+.animacion {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background: #02284e;
+  -webkit-animation: changecolor 5s linear infinite;
+          animation: changecolor 5s linear infinite;
+}
+
+@-webkit-keyframes changecolor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes changecolor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.loader {
+  position: relative;
+  display: flex;
+}
+
+.loader .dot {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #00ff0a;
+  box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a, 0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+  margin: 20px 20px;
+  transform: scale(0.3);
+  border-radius: 50%;
+  -webkit-animation: animatedot 2s linear infinite;
+          animation: animatedot 2s linear infinite;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
+}
+@-webkit-keyframes animatedot {
+  0% {
+    transform: scale 0.1;
+  }
+  10% {
+    transform: scale 1;
+  }
+  50%, 100% {
+    transform: scale 0.1;
+  }
+}
+@keyframes animatedot {
+  0% {
+    transform: scale 0.1;
+  }
+  10% {
+    transform: scale 1;
+  }
+  50%, 100% {
+    transform: scale 0.1;
+  }
+}
+
+/*FOOTER LINK*/
+.container6-fluid {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #02284e;
+  padding: 0 80px;
+}
+
+.mb-3 h3 {
+  color: white;
+  font-size: 22px;
+}
+
+.mb-3 h3:hover {
+  color: grey;
+}
+
+.mb-2 a {
+  color: white;
+  font-size: 16px;
+  padding-left: 0;
+}
+
+.mb-2 a:hover {
+  color: grey;
+}
+
+.rrss img {
+  width: 50px;
+  height: 50px;
+}
+
+.final {
+  width: 100%;
+  background-color: #011b35;
+  font-size: 20px;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*CATEGORIAS DESPENSA
+.news-cards-despensa {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  margin: 10px 0;
+}
+
+.news-cards-despensa img {
+  width: 100%;
+  height: 180px;
+}
+
+.despensa ul h2 {
+  font-size: 30px;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 0;
+  text-transform: capitalize;
+}
+
+.news-cards-despensa h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: rgb(64, 63, 63);
+  text-transform: capitalize;
+}
+
+/*CATEGORIAS LIQUIDOS
+.news-cards2-liquido {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  margin: 10px 0;
+}
+
+.news-cards2-liquido img {
+  width: 100%;
+  height: 180px;
+}
+
+.news-cards2-liquido h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: rgb(64, 63, 63);
+  text-transform: capitalize;
+}
+
+/*CATEGORIAS campañas
+.news-cards3-campañas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0;
+}
+
+.news-cards3-campañas a {
+  padding: 0;
+}
+
+.news-cards3-campañas ul {
+  padding: 0 5px;
+  margin: 0;
+}
+
+.news-cards3-campañas img {
+  width: 100%;
+  height: 450px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*APP FAZIL BENEFICIOS CONGRADIENTE
+.beneficios {
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./imag/bloque_1_landing_fazil_desktop.jpg);
+}
+
+.container33 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.box {
+  position: relative;
+  width: 380px;
+  height: 400px;
+  color: #fff;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 30px;
+  transition: 0.8s;
+}
+
+.container .box:hover {
+  transform: translateY(-20px);
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #4dff03, #00d0ff);
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #4dff03, #00d0ff);
+  filter: blur(30px);
+}
+
+.box:nth-child(2)::before,
+.box:nth-child(2)::after {
+  background: linear-gradient(45deg, #4dff03, #00d0ff);
+}
+
+.box:nth-child(3)::before,
+.box:nth-child(3)::after {
+  background: linear-gradient(45deg, #4dff03, #00d0ff);
+}
+
+.box span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.box span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box .beneficios2 {
+  position: relative;
+  z-index: 10;
+  padding: 20px 20px;
+}
+
+.beneficios ul h1 {
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+  padding: 20px 0;
+  text-transform: capitalize;
+  margin: 0 18px;
+}
+
+.beneficios ul h2 {
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+  padding: 20px 0;
+  text-transform: capitalize;
+  margin: 0 18px;
+}
+
+.box .beneficios2 h3 {
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.box .beneficios2 img {
+  width: 180px;
+  height: 180px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+/*APP FAZIL NUESTRA COBERTURA
+.cobertura {
+  margin: 0%;
+  background-color: #043e79;
+  padding: 20px 0;
+}
+
+.cobertura ul img {
+  width: 30%;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.cobertura h2 {
+  font-size: 30px;
+  display: flex;
+  padding: 20px 0;
+  text-transform: capitalize;
+  color: white;
+  margin: 0 18px;
+}
+
+.iframe1 {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+}
+
+.banner12 img {
+  width: 100%;
+  height: 550px;
+}
+
+/*APP FAZIL COMO FUNCIONA
+.comofunciona ul {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.comofunciona img {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+/*PAGINA MARCAS PROPIAS
+.news-cards3 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.banner12 img {
+  width: 100%;
+  height: 550px;
+}
+
+.news-cards2-liquido {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  margin: 10px 0;
+}
+
+.news-cards2-liquido img {
+  width: 100%;
+  height: 180px;
+  justify-content: center;
+}
+
+.news-cards2-liquido h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: rgb(64, 63, 63);
+  text-transform: capitalize;
+}
+
+.container-5 h2 {
+  font-size: 30px;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 20px;
+  text-transform: capitalize;
+  background-color: #043e79;
+  color: white;
+  justify-items: center;
+}
+
+.col-lg-4, .col-md-6, .col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 576px) {
+  /*NAVEGACION
+  .container {
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    margin: 0%;
+    padding: 0%;
+    z-index: 100;
+  }
+  /*class nav main
+  a {
+    line-height: 30px;
+  }
+  .nav-main img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-main ul li {
+    padding: 0px;
+  }
+  /*NEWS CARD
+  .banner1 img {
+    display: none;
+  }
+  .container1 {
+    padding: 10px 10px;
+  }
+  .row-propio {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+  }
+  .figura {
+    width: 200px;
+    height: 190px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .titulo h5 {
+    font-size: 14px;
+  }
+  .titulo p {
+    font-size: 16px;
+  }
+  /*otro
+  .container1 h1 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .container1 h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .h3 h3 {
+    font-size: 12px;
+  }
+  .mb-2 a {
+    font-size: 12px;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+  }
+  .news-cards h4 {
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  /*NEWS CARD 3 DESTACADOS
+  .news-cards3-1 img {
+    height: 300px;
+    padding: 0;
+  }
+  .news-cards3-2 img {
+    height: 400px;
+    padding: 0;
+  }
+  .news-cards3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+  }
+  /*ANIMACION
+  .loader .dot {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background: #00ff0a;
+    box-shadow: 10px #00ff0a, 20px #00ff0a, 40px #00ff0a, 60px #00ff0a, 80px #00ff0a, 100px #00ff0a;
+    margin: 10px 10px;
+  }
+  .banner2 img {
+    width: 100%;
+    height: 50px;
+  }
+  /*FOOTER LINK MEDIA
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .final {
+    font-size: 8px;
+  }
+  /*PAGINA MARCAS PROPIAS MEDIA
+  .banner12 img {
+    width: 100%;
+    height: 350px;
+  }
+  .news-cards2-liquido {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container-5 h2 {
+    font-size: 20px;
+  }
+  /*CATEGORIAS DESPENSA MEDIA
+  .banner11 {
+    display: none;
+  }
+  .news-cards-despensa {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+  .news-cards-despensa img {
+    height: 150px;
+  }
+  .titulo-principal2 h2 {
+    font-size: 20px;
+  }
+  .news-cards-despensa h3 {
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  /*CATEGORIAS LIQUIDOS MEDIA
+  .news-cards2-liquido {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    padding: 10px 10px;
+  }
+  .news-cards2-liquido img {
+    width: 100%;
+    height: 140px;
+  }
+  /*CATEGORIAS campañas MEDIA
+  .news-cards3-campañas {
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0%;
+  }
+  .campañas {
+    max-width: 98%;
+  }
+  .ul {
+    padding: 0;
+    margin: 0;
+  }
+  /*APP FAZIL BENEFICIOS MEDIA
+  .beneficios ul h1 {
+    font-size: 24px;
+    padding-top: 10px;
+  }
+  .beneficios ul h2 {
+    font-size: 24px;
+    padding-top: 10px;
+  }
+  .beneficios {
+    height: 300px;
+  }
+  .beneficios2 ul {
+    padding: 0%;
+    margin: 0;
+    justify-content: center;
+    align-content: center;
+  }
+  .beneficios2 {
+    height: 400px;
+    grid-template-columns: 1fr;
+    padding: 10px 10px;
+  }
+  .beneficios2 h3 {
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+  /*APP FAZIL NUESTRA COBERTURA MEDIA
+  .cobertura ul img {
+    width: 40%;
+    height: 40px;
+  }
+  .iframe1 {
+    width: 100%;
+    height: 60%;
+  }
+  .banner12 img {
+    width: 100%;
+    height: 300px;
+  }
+  /*APP FAZIL COMO FUNCIONA MEDIA
+  .comofunciona img {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  /*CMRPUNTOS - ABRIR CUENTA CMR MEDIA
+  .news-cards-abrir {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .abrircuentacmr ul h1 {
+    font-size: 25px;
+  }
+  .abrircuentacmr ul h2 {
+    font-size: 16px;
+  }
+  .news-cards-abrir h3 {
+    font-size: 12px;
+  }
+  .news-cards-abrir img {
+    width: 100%;
+    height: 100px;
+  }
+  .bannercmr1 img {
+    display: none;
+  }
+  /*USAR CUENTA CMR
+  .news-cards2-usar {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .news-cards2-usar h3 {
+    font-size: 12px;
+  }
+  /*ACUMULA PUNTOS CMR
+  .iframe33 {
+    display: flex;
+    min-width: 50%;
+  } */
+.api {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(13, 4, 109);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.hide, .remove{
+  display: none;
+}
+.alert{
+  z-index: 100;
+}
